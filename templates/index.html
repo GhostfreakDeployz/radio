@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Automática</title>
+    <script>
+        // Função para iniciar a rádio assim que a página carregar
+        window.onload = function() {
+            fetch('/rodar_radio')
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);  // Exibe a resposta no console
+                })
+                .catch(error => {
+                    console.error('Erro ao iniciar a rádio:', error);
+                });
+        };
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo à Rádio Automática</h1>
+    <p>A rádio começa a tocar automaticamente.</p>
+</body>
+</html>
