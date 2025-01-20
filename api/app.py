@@ -171,4 +171,4 @@ def rodar_radio_route():
 
 # Exemplo de uso
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False)  # Inicia o servidor Flask
+    app.run()  # Inicia o servidor Flask
