@@ -9,16 +9,16 @@ import subprocess
 from threading import Thread
 from datetime import datetime, timedelta
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 
 # Variáveis globais para controle do estado da rádio
 is_radio_running = False
 
 LASTFM_API_KEY = '9d7d79a952c5e5805a0decb0ccf1c9fd'
 vinhetas = [
-    "./static/vinhetas/vinheta_milenio.mp3",
-    "./static/vinhetas/vinheta_rock.mp3",
-    "./static/vinhetas/uma_hora.mp3"
+    "../static/vinhetas/vinheta_milenio.mp3",
+    "../static/vinhetas/vinheta_rock.mp3",
+    "../static/vinhetas/uma_hora.mp3"
 ]
 
 @app.route('/')
